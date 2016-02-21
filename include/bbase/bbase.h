@@ -37,10 +37,13 @@ extern "C" {
 #endif
 
   void BBase_free(void* obj);
-  void BBase_autoFree(void* obj);
+  
   int BBase_equal(void* lhs, void* rhs);
   int BBase_type(void* obj);
   BString BBase_createJson(void* obj);
+
+  // Internal - Do not use.
+  void BBase_autoFree(void* obj);
 
   // Testing only
   void BBase_setFreeFlag(void* obj, int* flag);
